@@ -1,5 +1,6 @@
 * [简介](default.md)
 * [hello world](介绍.md)
+* [常驻内存运行 启动\重启\停止](介绍.md)
 * [配置](配置.md)
 * [路由](路由.md)
     * [RESTful路由](RESTful路由.md)
