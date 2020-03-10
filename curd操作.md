@@ -14,7 +14,7 @@ $id  = User::insert([
 ```
 
 迭代用户所有的数据
-```
+```php
 $rs = User::chunk();
 foreach($rs as $user){
     
@@ -22,7 +22,7 @@ foreach($rs as $user){
 ```
 
 迭代和关系组合使用
-```
+```php
 User::where('id', '>', 100)
 ->where('status', '>', 1)
 ->with('category')
