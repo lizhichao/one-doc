@@ -13,6 +13,28 @@ $id  = User::insert([
 
 ```
 
+迭代用户所有的数据
+```
+$rs = User::chunk();
+foreach($rs as $user){
+    
+}
+```
+
+迭代和关系组合使用
+```
+User::where('id', '>', 100)
+->where('status', '>', 1)
+->with('category')
+->with('article', [
+    function ($q) {
+        $q->with('tags.tag')->with('commmit.user');
+    }
+])
+->chunk();
+```
+
+
 插入多条数据
 
 ```php
